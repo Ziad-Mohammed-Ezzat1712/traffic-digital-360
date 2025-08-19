@@ -8,6 +8,7 @@ import adham from "../../../Images/adham.JPG"
 import amr from "../../../Images/amr.JPG"
 import gargis from "../../../Images/gargis.JPG"
 import marim from "../../../Images/marim.JPG"
+import youssef from "../../../Images/youssef.JPG"
 export default function MarketingTeam() {
   const { isArabic } = useContext(LanguageContext);
 
