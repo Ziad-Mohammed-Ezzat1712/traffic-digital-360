@@ -137,10 +137,7 @@ export default function ContactUs() {
         <h2 className="text-3xl font-bold text-neutral-950 mb-8 text-center">
             {isArabic ? "تواصل معنا بكل سهولة" : "Contact Us Easily"}
           </h2>
-          <p className="text-gray-500">
-            يسعدنا التواصل معك في أي وقت
-
-          </p>
+          
       </div>
 
 <div className="flex flex-col  gap-2">
