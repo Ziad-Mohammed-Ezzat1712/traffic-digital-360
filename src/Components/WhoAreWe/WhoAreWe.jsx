@@ -4,7 +4,9 @@ import style from "./WhoAreWe.module.css"
 import MyClints from '../My-Clints/My-Clints'
 import InfoSection from '../InfoSection/InfoSection'
 import OurExperience from '../OurExperience/OurExperience'
-import TechnicalTeam from '../TechnicalTeam/TechnicalTeam';
+import whoarewe from "../../../Images/whoarewe.png"
+
+
 import MarketingTeam from '../MarketingTeam/MarketingTeam';
 import { Link } from 'react-router-dom';
 
@@ -66,7 +68,7 @@ Choosing us means securing a complete, well-rounded plan tailored to your compan
         <div className="relative w-full h-80 max-w-md">
          
           <img
-            src="../images/who are we.png"
+            src={whoarewe}
             alt="team-work"
             className="absolute top-[-60px] right-0 "
           />

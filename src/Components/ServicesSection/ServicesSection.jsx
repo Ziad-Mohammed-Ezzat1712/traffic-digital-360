@@ -2,7 +2,10 @@ import React, { useContext } from "react";
 import style from "./ServicesSection.module.css";
 import { LanguageContext } from "../../Context/LanguageContext";
 import { Link } from "react-router-dom";
-
+import softwaer from "../../../Images/softwaer.png"
+import markting from "../../../Images/markting.png"
+import production from "../../../Images/production.png"
+import serv from "../../../Images/serv.png"
 export default function ServicesSection() {
   const { isArabic } = useContext(LanguageContext);
 
@@ -18,21 +21,21 @@ export default function ServicesSection() {
   const services = [
     {
       title: isArabic ? "سوفت وير" : "Software",
-      image: "../images/softwaer.png",
+      image: softwaer,
       description: isArabic
         ? "تصميم وبرمجة المواقع الإلكترونية بالتأكيد ترغب في موقع إلكتروني “Website”او تطبيق  “Application” يمثل شركتك وتستطيع من خلاله الإستثمار وتنمية عملك."
         : "We develop custom software solutions to help your business grow and evolve.",
     },
     {
       title: isArabic ? "ماركتينج" : "Marketing",
-      image: "../images/markting.png",
+      image: markting,
       description: isArabic
         ? "نصنع لك حملات تسويقية احترافية تزيد من ظهورك وتحول جمهورك إلى عملاء."
         : "We create professional marketing campaigns to boost your visibility and convert your audience into customers.",
     },
     {
       title: isArabic ? "برودكشن" : "Production",
-      image: "../images/production.png",
+      image: production,
       description: isArabic
         ? "إنتاج فيديوهات عالية الجودة تسوّق لخدماتك بشكل احترافي وجذاب."
         : "High-quality video production that professionally promotes your services.",
@@ -52,7 +55,7 @@ export default function ServicesSection() {
           </p>
         </div>
         <div className="md:w-1/2 text-left">
-          <img src="../images/serv.png" alt="" />
+          <img src={serv} alt="" />
         </div>
       </section>
 

@@ -4,7 +4,7 @@ import * as yup from "yup";
 import axios from "axios";
 import { LanguageContext } from "../../Context/LanguageContext";
 import { useForm } from "react-hook-form";
-
+import us from "../../../Images/us.png"
 export default function ContactUs() {
   const { isArabic } = useContext(LanguageContext);
   const [countryCode, setCountryCode] = useState("+20");
@@ -130,7 +130,7 @@ export default function ContactUs() {
           </p>
         </div>
         <div className="md:w-1/2 text-left">
-          <img src="../images/us.png" alt="" />
+          <img src={us} alt="" />
         </div>
       </section>
       <div className="mb-10">

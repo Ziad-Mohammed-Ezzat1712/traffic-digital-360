@@ -1,7 +1,9 @@
   import React, { useContext } from "react";
   import style from "./InfoSection.module.css";
   import { LanguageContext } from "../../Context/LanguageContext"; // عدل المسار حسب مكان الملف
-
+  import Dataanalysiscuate from "../../../Images/Dataanalysis-cuate.png"
+  import Onlineconsultingpana from "../../../Images/Onlineconsulting-pana.png"
+  import Programmerpana from "../../../Images/Programmer-pana.png"
 
   export default function InfoSection() {
     const { isArabic } = useContext(LanguageContext);
@@ -16,7 +18,7 @@
             الكثير من المتخصصين في جميع التخصصات, مهما كان صعوبة مجالك.`
             : `The creative bridge through which your products and services reach your audience
             by many specialists in all fields, no matter how challenging your domain is.`,
-          imgSrc: "../images/Data analysis-cuate.png",
+          imgSrc: Dataanalysiscuate,
           imgAlt: isArabic ? "صورة توضيحية" : "Illustrative Image",
         },
         {
@@ -31,7 +33,7 @@
             we select the most suitable for your field, considering a deep understanding of
             our clients' goals and activities, creating unique and professionally executable ideas
             from our creative team.`,
-          imgSrc: "../images/Online consulting-pana.png",
+          imgSrc: Onlineconsultingpana,
           imgAlt: isArabic ? "صورة 2" : "Image 2",
         },
         {
@@ -42,7 +44,7 @@
             لتنفيذ تلك الأفكار الابداعية و الحفاظ علي استمراريتها.`
             : `By providing a suitable creative environment inside the company premises
             and offering the means to implement those creative ideas and maintain their continuity.`,
-          imgSrc: "../images/Programmer-pana.png",
+          imgSrc: Programmerpana,
           imgAlt: isArabic ? "صورة 3" : "Image 3",
         },
       ],
