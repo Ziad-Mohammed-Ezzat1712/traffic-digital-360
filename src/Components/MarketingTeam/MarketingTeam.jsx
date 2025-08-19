@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import style from "./MarketingTeam.module.css";
 import { LanguageContext } from "../../Context/LanguageContext";
-import gamal1 from "../../../Images/gamal1.jpg"
-import zeinb from "../../../Images/zeinb.jpg"
-import hamza from "../../../Images/hamza.jpg"
-import adham from "../../../Images/adham.jpg"
-import amr from "../../../Images/amr.jpg"
-import gargis from "../../../Images/gargis.jpg"
-import marim from "../../../Images/marim.jpg"
+import gamal1 from "../../../Images/gamal1.JPG"
+import zeinb from "../../../Images/zeinb.JPG"
+import hamza from "../../../Images/hamza.JPG"
+import adham from "../../../Images/adham.JPG"
+import amr from "../../../Images/amr.JPG"
+import gargis from "../../../Images/gargis.JPG"
+import marim from "../../../Images/marim.JPG"
 export default function MarketingTeam() {
   const { isArabic } = useContext(LanguageContext);
 
