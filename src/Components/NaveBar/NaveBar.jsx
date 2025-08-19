@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../../Images/logo.png";
 import { LanguageContext } from "../../Context/LanguageContext";
+import { FaTimes, FaBell } from "react-icons/fa"; // استدعاء الايقونات
 
 export default function NaveBar() {
   const { isArabic, toggleLanguage } = useContext(LanguageContext);
@@ -42,6 +43,16 @@ export default function NaveBar() {
           }`}
           style={{ direction: isArabic ? "rtl" : "ltr" }}
         >
+          {/* زرار إغلاق يظهر بس في الموبايل */}
+          {menuOpen && (
+            <button
+              onClick={toggleMenu}
+              className="self-end mb-2 text-xl text-gray-700 hover:text-black lg:hidden"
+            >
+              <FaTimes />
+            </button>
+          )}
+
           {navLinks.map(({ ar, en, to }) => (
             <NavLink key={to} to={to} className={linkClass}>
               {isArabic ? ar : en}
@@ -55,24 +66,26 @@ export default function NaveBar() {
           {/* Language Toggle Button */}
           <button
             onClick={toggleLanguage}
-            className="hidden md:inline border-2 text-black px-5 py-2 rounded-full hover:bg-[#2a2a2a] hover:text-white transition"
+            className="hidden md:inline border-2 cursor-pointer text-black px-5 py-2 rounded-full hover:bg-[#2a2a2a] hover:text-white transition"
           >
             {isArabic ? "English" : "العربية"}
           </button>
 
-          {/* Get Started Button */}
-          <button className="hidden md:inline border-2 text-black  px-5 py-2 rounded-full hover:bg-[#454545] hover:text-white transition">
-            {isArabic ? "ابدأ الآن" : "Get Started"}
-          </button>
+          {/* Get Started Button مع أيقونة الجرس */}
+<NavLink
+  to="/conectus"
+  className="border-2 text-black px-5 py-2 rounded-full hover:bg-[#454545] hover:text-white transition flex items-center gap-2"
+>
+  {isArabic ? "ابدأ الآن" : "Get Started"}
+  <FaBell />
+</NavLink>
 
-         
-
-     
+          {/* Hamburger Menu Button */}
           <button
             className="lg:hidden text-3xl focus:outline-none"
             onClick={toggleMenu}
           >
-            {menuOpen ? "✖" : "☰"}
+            {menuOpen ? <FaTimes /> : "☰"}
           </button>
         </div>
       </div>
